@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RentalLightVehicles.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooRentalVehiclesApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.teambearcats</a> &gt; <span class="el_source">RentalLightVehicles.java</span></div><h1>RentalLightVehicles.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.teambearcats;
+
+/**
+ * RentalLightVehicles class (derived subclass of the superclass
+ * ZooRentalVehiclesApp)
+ *
+ * @author Sai Kaushik Beeram
+ */
+public abstract class RentalLightVehicles {
+
+    /**
+     * Every animal has a name. Class variable name is not private, but
+     * protected - only subclasses can use it.
+     */
+<span class="fc" id="L19">    protected String vehicleName = &quot;Light Vehicles&quot;;</span>
+<span class="fc" id="L20">    protected String booking = &quot;Number of seats&quot;;</span>
+<span class="fc" id="L21">    protected int numOfPassengers = 6;</span>
+<span class="fc" id="L22">    protected double numOfMiles = 1200.50;</span>
+
+<span class="fc" id="L24">    public RentalLightVehicles(String vehicleName, String booking, int numOfPassengers, double numOfMiles) {</span>
+<span class="fc" id="L25">        this.vehicleName = vehicleName;</span>
+<span class="fc" id="L26">        this.booking = booking;</span>
+<span class="fc" id="L27">        this.numOfPassengers = numOfPassengers;</span>
+<span class="fc" id="L28">        this.numOfMiles = numOfMiles;</span>
+<span class="fc" id="L29">    }</span>
+
+    /**
+     * move() - general method for vehicle movement
+     */
+    public abstract void move();
+
+    /**
+     * speak() - general method for vehicle speed
+     */
+    public abstract void speed();
+
+    public String getVehicleName() {
+<span class="nc" id="L42">        return vehicleName;</span>
+    }
+
+    public String getBooking() {
+<span class="nc" id="L46">        return booking;</span>
+    }
+
+    public int getNumOfPassengers() {
+<span class="nc" id="L50">        return numOfPassengers;</span>
+    }
+
+    public double getNumOfMiles() {
+<span class="nc" id="L54">        return numOfMiles;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

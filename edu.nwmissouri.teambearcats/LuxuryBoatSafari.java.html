@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LuxuryBoatSafari.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooRentalVehiclesApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.teambearcats</a> &gt; <span class="el_source">LuxuryBoatSafari.java</span></div><h1>LuxuryBoatSafari.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.teambearcats;
+
+/**
+ *This class defines RentalHeavyVehicles 
+ * @author Sai Kaushik Beeram
+ */
+public class LuxuryBoatSafari extends RentalHeavyVehicles{
+    
+    private double ticketPrice_dollars;
+    private int numOfPassengers;
+    private double distanceTravelled_miles;
+   
+    /**
+ * LuxuryBoatSafari constructor
+ * @param vehicleName is LuxuaryBoatSafari
+ * @param carryHeavyLoad it carries large number of passengers
+ * @param vehicleWeight LuxuarBoat is of HeavyWeight 
+ */
+   
+
+    
+   
+
+    public LuxuryBoatSafari(double ticketPrice_dollars, int numOfPassengers, double distanceTravelled_miles, String vehicleName, String carryHeavyLoad, double vehicleWeight) {
+<span class="fc" id="L29">        super(vehicleName, carryHeavyLoad, vehicleWeight);</span>
+<span class="fc" id="L30">        this.ticketPrice_dollars = ticketPrice_dollars;</span>
+<span class="fc" id="L31">        this.numOfPassengers = numOfPassengers;</span>
+<span class="fc" id="L32">        this.distanceTravelled_miles = distanceTravelled_miles;</span>
+<span class="fc" id="L33">    }</span>
+
+    public double getTicketPrice() {
+<span class="fc" id="L36">        return ticketPrice_dollars;</span>
+    }
+
+    public void setTicketPrice(double ticketPrice_dollars) {
+<span class="fc" id="L40">        this.ticketPrice_dollars = ticketPrice_dollars;</span>
+<span class="fc" id="L41">    }</span>
+
+    public int getNumOfPassengers() {
+<span class="fc" id="L44">        return numOfPassengers;</span>
+    }
+
+    public void setNumOfPassengers(int numOfPassengers) {
+<span class="fc" id="L48">        this.numOfPassengers = numOfPassengers;</span>
+<span class="fc" id="L49">    }</span>
+    
+    public double getDistanceTraveled() {
+<span class="fc" id="L52">        return distanceTravelled_miles;</span>
+    }
+    
+    public void setDistanceTraveled(double distanceTravelled_miles) {
+<span class="fc" id="L56">        this.distanceTravelled_miles = distanceTravelled_miles;</span>
+<span class="fc" id="L57">    }</span>
+    /**
+     * move() - general method for vehicle movement 
+     */
+    @Override
+    public void move(){
+<span class="fc" id="L63">        System.out.println(&quot;I  have travelled &quot;+distanceTravelled_miles);</span>
+<span class="fc" id="L64">    }</span>
+
+    /**
+     * capacity() - general method for vehicle capacity
+     */
+    @Override
+    public void capacity() {
+<span class="fc" id="L71">        System.out.println(&quot;I have capacity of &quot; +numOfPassengers);</span>
+<span class="fc" id="L72">    }</span>
+
+    /**
+     * price() - general method for vehicle price
+     */
+    @Override
+    public void price() {
+<span class="fc" id="L79">        System.out.println(&quot;My cost is &quot; + ticketPrice_dollars);</span>
+<span class="fc" id="L80">    }</span>
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L84">        LuxuryBoatSafari luxuryBoatSafariObj = new LuxuryBoatSafari(2.4, 5, 3.9, &quot;LuxuryBoatSafari&quot;, &quot;Yes&quot;, 2.3);</span>
+
+<span class="nc" id="L86">        luxuryBoatSafariObj.move();</span>
+<span class="nc" id="L87">        luxuryBoatSafariObj.capacity();</span>
+<span class="nc" id="L88">        luxuryBoatSafariObj.price();</span>
+
+<span class="nc" id="L90">    }</span>
+
+    /**
+     * toString() of LuxuryBoatSafari 
+     * @return 
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L98">        return &quot;LuxuryBoatSafari{&quot; + &quot;ticketPrice_dollars=&quot; + ticketPrice_dollars + &quot;, numOfPassengers=&quot; + numOfPassengers + &quot;, distanceTravelled_miles=&quot; + distanceTravelled_miles + '}';</span>
+    }
+    
+  
+      
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

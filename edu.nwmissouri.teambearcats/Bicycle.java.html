@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bicycle.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooRentalVehiclesApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.teambearcats</a> &gt; <span class="el_source">Bicycle.java</span></div><h1>Bicycle.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.teambearcats;
+
+/**
+ * Bicycle class (derived subclass of the superclass RentalLightVehicles)
+ *
+ * @author Vinay Manavarthi
+ */
+public class Bicycle extends RentalLightVehicles {
+
+    private int numOfWheels;
+    private double priceIn_dollars;
+
+    /**
+     * Bicycle Constructor
+     *
+     * @param numOfWheels - This is the number of wheels for bicycles
+     * @param priceIn_dollars - Bus carries the heavy load
+     * @param vehicleName - This is vehicleName
+     * * @param booking - This is for ticket booking
+     * * @param numOfPassengers - This is numOfPassengers in the bus
+     */
+    public Bicycle(int numOfWheels, double priceIn_dollars, String vehicleName, String booking, int numOfPassengers, Double numOfMiles) {
+<span class="fc" id="L27">        super(vehicleName, booking, numOfPassengers, numOfMiles);</span>
+<span class="fc" id="L28">        this.numOfWheels = numOfWheels;</span>
+<span class="fc" id="L29">        this.priceIn_dollars = priceIn_dollars;</span>
+<span class="fc" id="L30">    }</span>
+
+    public int getNumOfWheels() {
+<span class="fc" id="L33">        return numOfWheels;</span>
+    }
+
+    public void setNumOfWheels(int numOfWheels) {
+<span class="fc" id="L37">        this.numOfWheels = numOfWheels;</span>
+<span class="fc" id="L38">    }</span>
+
+    public double getPriceIn_dollars() {
+<span class="fc" id="L41">        return priceIn_dollars;</span>
+    }
+
+    public void setPriceIn_dollars(double priceIn_dollars) {
+<span class="fc" id="L45">        this.priceIn_dollars = priceIn_dollars;</span>
+<span class="fc" id="L46">    }</span>
+
+    /**
+     * The move method
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L53">        System.out.println(&quot;I  have &quot; + numOfWheels + &quot; wheels to move on road&quot;);</span>
+<span class="fc" id="L54">    }</span>
+
+    /**
+     * The speed method
+     */
+    @Override
+    public void speed() {
+<span class="fc" id="L61">        System.out.println(&quot;My cost is $&quot; + priceIn_dollars);</span>
+<span class="fc" id="L62">    }</span>
+
+    /**
+     * The Gear method.
+     *
+     */
+    public void gear() {
+<span class="fc" id="L69">        System.out.println(&quot;Im a gear bicycle &quot;);</span>
+<span class="fc" id="L70">    }</span>
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L74">        Bicycle bicycleObj = new Bicycle(2, 3.3, &quot;bicycle&quot;, &quot;Yes&quot;, 1, 3.4);</span>
+
+<span class="nc" id="L76">        bicycleObj.gear();</span>
+<span class="nc" id="L77">        bicycleObj.move();</span>
+<span class="nc" id="L78">        bicycleObj.speed();</span>
+
+<span class="nc" id="L80">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L84">        return &quot;Bicycle{&quot; + &quot;numOfWheels=&quot; + numOfWheels + &quot;, priceIn_dollars=&quot; + priceIn_dollars + '}';</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

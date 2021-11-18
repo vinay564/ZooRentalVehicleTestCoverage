@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SpeedBoat.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooRentalVehiclesApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.teambearcats</a> &gt; <span class="el_source">SpeedBoat.java</span></div><h1>SpeedBoat.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.teambearcats;
+
+/**
+ * SpeedBoat (derived subclass from the superclass RentalLightVehicles)
+ *
+ * @author Rajasheekhar Kota
+ */
+public class SpeedBoat extends RentalLightVehicles {
+
+<span class="fc" id="L14">    private double ticketprice = 45.75;</span>
+<span class="fc" id="L15">    private double distanceTravelled = 75.44;</span>
+<span class="fc" id="L16">    private int numOfPassengers = 6;</span>
+
+    /**
+     * used constructor for SpeedBoat
+     *
+     * @param vehicleName
+     * @param booking
+     * @param numOfPassengers
+     * @param numOfMiles
+     */
+    public SpeedBoat(String vehicleName, String booking, int numOfPassengers, Double numOfMiles) {
+<span class="fc" id="L27">        super(vehicleName, booking, numOfPassengers, numOfMiles);</span>
+<span class="fc" id="L28">        this.ticketprice = ticketprice;</span>
+<span class="fc" id="L29">        this.distanceTravelled = distanceTravelled;</span>
+<span class="fc" id="L30">        this.numOfPassengers = numOfPassengers;</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * getter is used forTicketPrice
+     *
+     * @return
+     */
+    public double getTicketprice() {
+<span class="fc" id="L39">        return ticketprice;</span>
+    }
+
+    /**
+     * setter is used TicketPrice
+     *
+     * @param ticketprice
+     */
+    public void setTicketprice(double ticketprice) {
+<span class="fc" id="L48">        this.ticketprice = ticketprice;</span>
+<span class="fc" id="L49">    }</span>
+
+    /**
+     * getter is used for DistanceTravelled
+     *
+     * @return
+     */
+    public double getDistanceTravelled() {
+<span class="fc" id="L57">        return distanceTravelled;</span>
+    }
+
+    /**
+     * setter is used for DistanceTravelled
+     *
+     * @param distanceTravelled
+     */
+    public void setDistanceTravelled(double distanceTravelled) {
+<span class="fc" id="L66">        this.distanceTravelled = distanceTravelled;</span>
+<span class="fc" id="L67">    }</span>
+
+    public int getNumOfPassengers() {
+<span class="fc" id="L70">        return numOfPassengers;</span>
+    }
+
+    public void setNumOfPassengers(int numOfPassengers) {
+<span class="fc" id="L74">        this.numOfPassengers = numOfPassengers;</span>
+<span class="fc" id="L75">    }</span>
+
+    /**
+     * move() - general method for vehicle movement
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L82">        System.out.println(&quot;SpeedBoat moves on water&quot;);</span>
+<span class="fc" id="L83">    }</span>
+
+    /**
+     * speed() - general method for vehicle speed
+     */
+    @Override
+    public void speed() {
+<span class="fc" id="L90">        System.out.println(&quot;The average speed of the speedboat is 55km/hr&quot;);</span>
+<span class="fc" id="L91">    }</span>
+
+    /**
+     * NumberOfSeats() - general method for Seats in JetBoat
+     */
+    public void NumberOfSeats() {
+<span class="fc" id="L97">        System.out.println(&quot;number of seats in a jetboat.&quot;);</span>
+<span class="fc" id="L98">    }</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L101">        SpeedBoat speedboatObj = new SpeedBoat(&quot;Speedboat&quot;, &quot;Yes&quot;, 6, 75.44);</span>
+<span class="nc" id="L102">        speedboatObj.move();</span>
+<span class="nc" id="L103">        speedboatObj.speed();</span>
+<span class="nc" id="L104">        speedboatObj.NumberOfSeats();</span>
+<span class="nc" id="L105">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L109">        return &quot;SpeedBoat{&quot; + &quot;ticketprice=&quot; + ticketprice + &quot;, distanceTravelled=&quot; + distanceTravelled + &quot;, numOfPassengers=&quot; + numOfPassengers + '}';</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

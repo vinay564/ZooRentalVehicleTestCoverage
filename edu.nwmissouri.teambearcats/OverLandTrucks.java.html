@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OverLandTrucks.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooRentalVehiclesApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.teambearcats</a> &gt; <span class="el_source">OverLandTrucks.java</span></div><h1>OverLandTrucks.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.teambearcats;
+
+/**
+ * OverLandtrucks class (derived subclass of the superclass RentalHeavyVehicles)
+ *
+ * @author Pranay Bhargav reddy Bakaram (S545147)
+ *
+ */
+public class OverLandTrucks extends RentalHeavyVehicles {
+
+    private int numOfWheels;
+    private double ticketPrice_dollars;
+
+    /**
+     * OverLandTrucks Constructor
+     *
+     * @param vehicleName - This is the vehicle name of the BUS
+     * @param carryHeavyLoad - Bus carries the heavy load
+     * @param vehicleWeight - This is vehicle weight
+     */
+    public OverLandTrucks(int numOfWheels, double ticketPrice_dollars, String vehicleName, String carryHeavyLoad, double vehicleWeight) {
+<span class="fc" id="L26">        super(vehicleName, carryHeavyLoad, vehicleWeight);</span>
+<span class="fc" id="L27">        this.numOfWheels = numOfWheels;</span>
+<span class="fc" id="L28">        this.ticketPrice_dollars = ticketPrice_dollars;</span>
+<span class="fc" id="L29">    }</span>
+
+    public int getNumOfWheels() {
+<span class="fc" id="L32">        return numOfWheels;</span>
+    }
+
+    public void setNumOfWheels(int numOfWheels) {
+<span class="fc" id="L36">        this.numOfWheels = numOfWheels;</span>
+<span class="fc" id="L37">    }</span>
+
+    public double getTicketPrice() {
+<span class="fc" id="L40">        return ticketPrice_dollars;</span>
+    }
+
+    public void setTicketPrice(double ticketPrice_dollars) {
+<span class="fc" id="L44">        this.ticketPrice_dollars = ticketPrice_dollars;</span>
+<span class="fc" id="L45">    }</span>
+
+
+    /**
+     * return seatingCapacity
+     *
+     * @return
+     */
+    public int seatingCapacity() {
+<span class="fc" id="L54">        return 1;</span>
+    }
+
+    //consumes method.
+    public void consumes() {
+<span class="fc" id="L59">        System.out.println(&quot;I consume more &quot;+FuelType.DIESEL);</span>
+<span class="fc" id="L60">    }</span>
+    /*
+    overriding move method
+    */
+    @Override
+    public void move() {
+<span class="fc" id="L66">        System.out.println(&quot;I Have &quot;+ this.numOfWheels + &quot; wheels to move&quot;);</span>
+
+<span class="fc" id="L68">    }</span>
+    /*
+    overriding capacity method
+    */
+    @Override
+    public void capacity() {
+<span class="fc" id="L74">        System.out.println(&quot;I Carries Heavy Load&quot;);</span>
+<span class="fc" id="L75">    }</span>
+    /*
+    overriding price method.
+    */
+    @Override
+    public void price() {
+<span class="fc" id="L81">        System.out.println(&quot;My Ticket Price is $&quot; +this.ticketPrice_dollars );</span>
+<span class="fc" id="L82">    }</span>
+    
+    
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L88">        OverLandTrucks Obj = new OverLandTrucks(8,4.5,&quot;BMW&quot;, &quot;IM carrying Heavy load&quot;, 5000.00);</span>
+
+<span class="nc" id="L90">        Obj.capacity();</span>
+<span class="nc" id="L91">        Obj.consumes();</span>
+<span class="nc" id="L92">        Obj.price();</span>
+<span class="nc" id="L93">        Obj.move();</span>
+
+<span class="nc" id="L95">    }</span>
+    /**
+     * return String
+     * @return 
+     */
+    
+    @Override
+    public String toString() {
+<span class="fc" id="L103">        return &quot;OverLandTrucks{&quot; + &quot;numOfWheels=&quot; + numOfWheels + &quot;, ticketPrice=&quot; + ticketPrice_dollars + &quot;}&quot;;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

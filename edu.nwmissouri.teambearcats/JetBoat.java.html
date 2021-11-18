@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JetBoat.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooRentalVehiclesApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.teambearcats</a> &gt; <span class="el_source">JetBoat.java</span></div><h1>JetBoat.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.teambearcats;
+
+/**
+ * JetBoat (derived subclass from the superclass RentalLightVehicles)
+ *
+ * @author Rajashekhar Kota
+ */
+public class JetBoat extends RentalLightVehicles {
+
+<span class="fc" id="L14">    private double ticketPrice = 65.56;</span>
+<span class="fc" id="L15">    private double distanceTravelled = 55.76;</span>
+
+    /**
+     * used constructor for JetBoat
+     *
+     * @param vehicleName
+     * @param booking
+     * @param numOfPassengers
+     * @param numOfMiles
+     */
+    public JetBoat(String vehicleName, String booking, int numOfPassengers, Double numOfMiles) {
+<span class="fc" id="L26">        super(vehicleName, booking, numOfPassengers, numOfMiles);</span>
+<span class="fc" id="L27">        this.ticketPrice = ticketPrice;</span>
+<span class="fc" id="L28">        this.distanceTravelled = distanceTravelled;</span>
+<span class="fc" id="L29">    }</span>
+
+    /**
+     * getter method is used for TicketPrice
+     *
+     * @return
+     */
+    public double getTicketPrice() {
+<span class="fc" id="L37">        return ticketPrice;</span>
+    }
+
+    /**
+     * setter method is used for TicketPrice
+     *
+     * @param ticketPrice
+     */
+    public void setTicketPrice(double ticketPrice) {
+<span class="fc" id="L46">        this.ticketPrice = ticketPrice;</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     * getter method is used for DistanceTravelled
+     *
+     * @return
+     */
+    public double getDistanceTravelled() {
+<span class="fc" id="L55">        return distanceTravelled;</span>
+    }
+
+    /**
+     * setter method is used for DistanceTravelled
+     *
+     * @param distanceTravelled
+     */
+    public void setDistanceTravelled(double distanceTravelled) {
+<span class="fc" id="L64">        this.distanceTravelled = distanceTravelled;</span>
+<span class="fc" id="L65">    }</span>
+
+    /**
+     * move() - general method for vehicle movement
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L72">        System.out.println(&quot;jetboat moves faster than speedboat&quot;);</span>
+<span class="fc" id="L73">    }</span>
+
+    /**
+     * speed() - general method for vehicle speed
+     */
+    @Override
+    public void speed() {
+<span class="fc" id="L80">        System.out.println(&quot;The Average speed of the jetboat is 80km/hr&quot;);</span>
+<span class="fc" id="L81">    }</span>
+
+    /**
+     * safetyMeasures() - general method for passengers safety
+     */
+    public void safetyMeasures() {
+<span class="fc" id="L87">        System.out.println(&quot;SfetyMeasures must be included&quot;);</span>
+<span class="fc" id="L88">    }</span>
+
+    /**
+     * experience() - general method for experience
+     */
+    public void experience() {
+<span class="fc" id="L94">        System.out.println(&quot;operator must have experience&quot;);</span>
+<span class="fc" id="L95">    }</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L98">        JetBoat jetboatObj = new JetBoat(&quot;jetboat&quot;, &quot;yes&quot;, 6, 75.44);</span>
+<span class="nc" id="L99">        jetboatObj.move();</span>
+<span class="nc" id="L100">        jetboatObj.speed();</span>
+<span class="nc" id="L101">        jetboatObj.safetyMeasures();</span>
+<span class="nc" id="L102">        jetboatObj.experience();</span>
+<span class="nc" id="L103">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L107">        return &quot;JetBoat{&quot; + &quot;ticketPrice=&quot; + ticketPrice + &quot;, distanceTravelled=&quot; + distanceTravelled + '}';</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
